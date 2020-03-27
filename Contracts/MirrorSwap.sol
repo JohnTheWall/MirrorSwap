@@ -41,7 +41,9 @@ contract MirrorSwap {
         RevertTimestamp = now +  revertTimeSeconds;
         swapComplete = false;
         
-        ERC20(MakerAsset).approve(address(this), makerAssetAmount*10);
+        if (MakerAsset != 0x0000000000000000000000000000000000000000){
+            ERC20(MakerAsset).approve(address(this), makerAssetAmount*10);
+        }
     }
     
     // Deposit Maker Asset 
