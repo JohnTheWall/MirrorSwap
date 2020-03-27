@@ -20,7 +20,7 @@ contract MirrorSwap {
     uint256 public RevertTimestamp;
     
     // swap complete bool
-    bool swapComplete;
+    bool public swapComplete;
     
     // ============ Constructor ============
 
